@@ -1,0 +1,3 @@
+$key=(Get-AzureRmStorageAccountKey -ResourceGroupName $(terraformstoragerg) -AccountName $(terraformstorageaccount)).Value[0]
+
+Write-host "##vso[task.setvariable variable=storagekey]$key"
